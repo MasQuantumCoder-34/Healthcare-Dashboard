@@ -9,11 +9,10 @@ const Login: React.FC = () => {
     useForm<FormValues>();
   const navigate = useNavigate();
 
-  const onSubmit = (data: FormValues) => {
-    // dummy auth — store token & go to dashboard
-    localStorage.setItem("token", "dummy-jwt");
-    navigate("/dashboard");
-  };
+  const onSubmit = () => {
+  localStorage.setItem("token", "dummy-jwt");
+  navigate("/dashboard");
+};
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
